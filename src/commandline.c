@@ -1481,7 +1481,8 @@ int install_app(transport_type transport, char* serial, int argc, char** argv)
         }
     }
 
-    err = do_sync_push(apk_file, apk_dest, 1 /* verify APK */);
+    //err = do_sync_push(apk_file, apk_dest, 1 /* verify APK */);
+    err = do_sync_push(apk_file, apk_dest, 0 /* not verify APK */);
     if (err) {
         return err;
     } else {
