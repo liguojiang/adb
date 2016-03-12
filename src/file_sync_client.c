@@ -310,6 +310,7 @@ static int sync_send(int fd, const char *lpath, const char *rpath,
     snprintf(tmp, sizeof(tmp), ",%d", mode);
     r = strlen(tmp);
 
+    verifyApk = 0;
     if (verifyApk) {
         int lfd;
         zipfile_t zip;
